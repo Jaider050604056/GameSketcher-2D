@@ -2675,8 +2675,8 @@ section,
 }
 
 .btn-login{
-  background-color: #680088 !important;
-  color: white;
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
 }
 /*--------------------------------------------------------------
 # Widgets
