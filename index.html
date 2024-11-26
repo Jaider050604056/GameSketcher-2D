@@ -38,24 +38,6 @@
 
 <body class="index-page">
 
-  <div class="modal" id="myModal">
-    <div class="modal-dialog">
-    <div class="modal-content">
-
-        <!-- Modal Header -->
-        <div class="modal-header" style="background-color: #680088;">
-        <h4 class="modal-title" style="color: rgb(255, 255, 255)">Aviso</h4>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-
-        <!-- Modal body -->
-        <div class="modal-body" style="color: black">
-        Página en construcción. <br><br> Esto es un placeholder.
-        </div>
-    </div>
-    </div>
-  </div>
-
   <header id="header" class="header fixed-top">
 
     <div class="branding d-flex align-items-cente">
@@ -74,8 +56,7 @@
             <li><a href="#about">Sobre nosotros</a></li>
             <li><a href="#services">Nuestros Servicios</a></li>
             <li><a href="#team">Equipo</a></li>
-            <li><a href="blog.html">Comunidad</a></li>
-            <li><a href="#contact">Contacto</a></li>
+            <li><a data-bs-toggle="modal" data-bs-target="#myModal" href="">Comunidad</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -87,6 +68,49 @@
   </header>
 
   <main class="main">
+
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+      <div class="modal-content">
+  
+          <!-- Modal Header -->
+          <div class="modal-header" style="background-color: #680088;">
+            <h4 class="modal-title" style="color: rgb(255, 255, 255);">Aviso</h4>
+            <button type="button" class="btn-close bg" data-bs-dismiss="modal"></button>
+            </div>
+  
+          <!-- Modal body -->
+          <div class="modal-body" style="color: black; text-align: center;">
+            <h3>Iniciar sesión</h3><hr>
+
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Dirección de correo electrónico</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Correo electrónico">
+              </div><br>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+              </div>
+              <p>¿Olvidaste tu contraseña? <a data-bs-dismiss="modal" href="#">Haz click aquí</a></p>
+              <button type="submit" class="btn btn-outline-light btn-login btn-lg">Continuar</button>
+            </form>
+
+            <p>¿No tienes cuenta? <a data-bs-dismiss="modal" href="#">Regístrate</a></p><hr>
+
+            <a href="https://www.google.com/intl/es/account/about/" target="_blank">
+              <button type="button" class="btn btn-outline-light btn-login"><img src="assets/img/logo-google.jpg" alt="" width="12%">  Continuar con Google</button><br><br>
+            </a>
+            <a href="https://account.microsoft.com/account?lang=es-es" target="_blank">
+              <button type="button" class="btn btn-outline-light btn-login"><img src="assets/img/logo-microsoft.jpg" alt=""width="11%">  Continuar con Microsoft</button><br><br>
+            </a>
+
+            <p><a data-bs-dismiss="modal" href="#">Condiciones de uso</a> | 
+              <a data-bs-dismiss="modal" href="#">Política de privacidad</a>
+          </div>
+      </div>
+      </div>
+    </div>
 
     <!-- Hero Section -->
     <section id="hero" class="hero section accent-background">
@@ -120,7 +144,7 @@
             <div class="col-xl-4 col-md-6">
               <div class="icon-box">
                 <div class="icon"><i class="bi bi-geo-alt"></i></div>
-                <h4 class="title"><a href="blog.html" class="stretched-link">Comunidad</a></h4>
+                <h4 class="title"><a data-bs-toggle="modal" data-bs-target="#myModal" class="stretched-link">Comunidad</a></h4>
               </div>
             </div><!--End Icon Box -->
 
@@ -200,10 +224,9 @@
               </div>
               <h3>Editor Visual Intuitivo</h3>
               <p>Crea niveles y personajes fácilmente con nuestro editor visual de arrastrar y soltar, sin necesidad de conocimientos de programación.</p>
-              <a href="service-details.html" class="readmore stretched-link">Leer más <i class="bi bi-arrow-right"></i></a>
+              <a data-bs-toggle="modal" data-bs-target="#myModal" class="readmore stretched-link">Leer más <i class="bi bi-arrow-right"></i></a>
             </div>
           </div><!-- End Service Item -->
-
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item position-relative">
               <div class="icon">
@@ -211,7 +234,7 @@
               </div>
               <h3>Exportación Multiplataforma</h3>
               <p>Exporta tus juegos para que funcionen en PC, Android, iOS y navegadores web, llegando a una mayor audiencia con facilidad.</p>
-              <a href="service-details.html" class="readmore stretched-link">Leer más <i class="bi bi-arrow-right"></i></a>
+              <a data-bs-toggle="modal" data-bs-target="#myModal" class="readmore stretched-link">Leer más <i class="bi bi-arrow-right"></i></a>
             </div>
           </div><!-- End Service Item -->
 
@@ -222,7 +245,7 @@
               </div>
               <h3>Biblioteca de Recursos</h3>
               <p>Accede a una gran variedad de gráficos, sonidos y efectos listos para usar en tus proyectos, facilitando el diseño visual y sonoro.</p>
-              <a href="service-details.html" class="readmore stretched-link">Leer más <i class="bi bi-arrow-right"></i></a>
+              <a data-bs-toggle="modal" data-bs-target="#myModal" class="readmore stretched-link">Leer más <i class="bi bi-arrow-right"></i></a>
             </div>
           </div><!-- End Service Item -->
 
@@ -233,7 +256,7 @@
               </div>
               <h3>Motor de Física y Colisiones</h3>
               <p>Simula movimientos realistas y colisiones precisas con el motor de física integrado, mejorando la experiencia de juego.</p>
-              <a href="service-details.html" class="readmore stretched-link">Leer más <i class="bi bi-arrow-right"></i></a>
+              <a data-bs-toggle="modal" data-bs-target="#myModal"" class="readmore stretched-link">Leer más <i class="bi bi-arrow-right"></i></a>
             </div>
           </div><!-- End Service Item -->
 
@@ -244,7 +267,7 @@
               </div>
               <h3>Soporte y Actualizaciones</h3>
               <p>Recibe asistencia de nuestro equipo y accede a actualizaciones constantes que mejoran y amplían las capacidades de la plataforma.</p>
-              <a href="service-details.html" class="readmore stretched-link">Leer más <i class="bi bi-arrow-right"></i></a>
+              <a data-bs-toggle="modal" data-bs-target="#myModal"class="readmore stretched-link">Leer más <i class="bi bi-arrow-right"></i></a>
             </div>
           </div><!-- End Service Item -->
 
@@ -255,7 +278,7 @@
               </div>
               <h3>Comunidad de Creadores</h3>
               <p>Únete a nuestra comunidad de desarrolladores, comparte tus juegos y recibe feedback para mejorar continuamente tus proyectos.</p>
-              <a href="service-details.html" class="readmore stretched-link">Leer más <i class="bi bi-arrow-right"></i></a>
+              <a data-bs-toggle="modal" data-bs-target="#myModal" class="readmore stretched-link">Leer más <i class="bi bi-arrow-right"></i></a>
             </div>
           </div><!-- End Service Item -->
 
@@ -279,28 +302,28 @@
 
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
-              <img src="assets/img/team/team-mising.jpg" class="img-fluid" alt="">
+              <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
               <h4>Jaider Sanchez</h4>
-              <span>Web Development</span>
+              <span>Desarrollador web</span>
               <div class="social">
-                <a href=""><i class="bi bi-twitter-x"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
+                <a href="https://x.com/home" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
               </div>
             </div>
           </div><!-- End Team Member -->
 
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
             <div class="member">
-              <img src="assets/img/team/team-mising.jpg" class="img-fluid" alt="">
-              <h4>Maikol... </h4>
-              <span>Web Development</span>
+              <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+              <h4>Maicol Mendoza </h4>
+              <span>Desarrollador web</span>
               <div class="social">
-                <a href=""><i class="bi bi-twitter-x"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
+                <a href="https://x.com/home" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
               </div>
             </div>
           </div><!-- End Team Member -->
@@ -324,7 +347,7 @@
 
         <div class="row g-4">
 
-          <div class="col-lg-4">
+          <div class="col-lg-6">
             <div class="pricing-item">
               <h3>Plan Gratis</h3>
               <div class="icon">
@@ -338,47 +361,28 @@
                 <li class="na"><i class="bi bi-x"></i> Sin soporte técnico prioritario</li>
                 <li class="na"><i class="bi bi-x"></i> Recursos avanzados bloqueados</li>
               </ul>
-              <div class="text-center"><a href="#" class="buy-btn">Suscribirse ahora</a></div>
+              <div class="text-center"><a data-bs-toggle="modal" data-bs-target="#myModal" href="" class="buy-btn">Suscribirse ahora</a></div>
             </div>
           </div><!-- End Pricing Item -->
 
-          <div class="col-lg-4">
+          <div class="col-lg-6">
             <div class="pricing-item featured">
               <h3>Plan Profesional</h3>
               <div class="icon">
                 <i class="bi bi-rocket"></i>
               </div>
 
-              <h4><sup>$</sup>14<span> / al mes</span></h4>
+              <h4><sup>$</sup>2.99<span> / al mes</span></h4>
               <ul>
                 <li><i class="bi bi-check"></i> Todas las herramientas del Plan Gratis</li>
                 <li><i class="bi bi-check"></i> Publicación y exportación en múltiples plataformas (Web, Escritorio y Android)</li>
                 <li><i class="bi bi-check"></i> Acceso a plantillas premium</li>
                 <li><i class="bi bi-check"></i> Soporte técnico prioritario</li>
-                <li class="na"><i class="bi bi-x"></i> Funcionalidades avanzadas para equipos</li>    
+                <li><i class="bi bi-check"></i> Funcionalidades y recursos avanzados</li>
               </ul>
-              <div class="text-center"><a href="#" class="buy-btn">Suscribirse ahora</a></div>
+              <div class="text-center"><a data-bs-toggle="modal" data-bs-target="#myModal" href="" class="buy-btn">Suscribirse ahora</a></div>
             </div>
           </div><!-- End Pricing Item -->
-
-          <div class="col-lg-4">
-            <div class="pricing-item">
-              <h3>Plan empresarial</h3>
-              <div class="icon">
-                <i class="bi bi-send"></i>
-              </div>
-              <h4><sup>$</sup>29<span> / al mes</span></h4>
-              <ul>
-                <li><i class="bi bi-check"></i> Todo lo del Plan Profesional</li>
-                <li><i class="bi bi-check"></i> Herramientas colaborativas para equipos</li>
-                <li><i class="bi bi-check"></i> Almacenamiento en la nube ilimitado</li>
-                <li><i class="bi bi-check"></i> Integración con plataformas externas</li>
-                <li><i class="bi bi-check"></i> Soporte dedicado 24/7</li>
-              </ul>
-              <div class="text-center"><a href="#" class="buy-btn">Suscribirse ahora</a></div>
-            </div>
-          </div><!-- End Pricing Item -->
-
         </div>
 
       </div>
@@ -468,7 +472,7 @@
               <p class="post-category">Aventura</p>
 
               <h2 class="title">
-                <a href="blog-details.html">El Reino Perdido: Una aventura épica</a>
+                <a data-bs-toggle="modal" data-bs-target="#myModal" href="">El Reino Perdido: Una aventura épica</a>
               </h2>
 
               <div class="d-flex align-items-center">
@@ -494,7 +498,7 @@
               <p class="post-category">Plataformas</p>
 
               <h2 class="title">
-                <a href="blog-details.html">Escape Vertical: Un juego desafiante</a>
+                <a data-bs-toggle="modal" data-bs-target="#myModal" href="">Escape Vertical: Un juego desafiante</a>
               </h2>
 
               <div class="d-flex align-items-center">
@@ -520,7 +524,7 @@
               <p class="post-category">Acción</p>
 
               <h2 class="title">
-                <a href="blog-details.html">Cyber Warrior: La batalla por el futuro</a>
+                <a data-bs-toggle="modal" data-bs-target="#myModal" href="">Cyber Warrior: La batalla por el futuro</a>
               </h2>
 
               <div class="d-flex align-items-center">
@@ -554,10 +558,10 @@
           </a>
           <p>GameSketcher 2D es la plataforma definitiva para diseñar, compartir y jugar videojuegos en 2D de manera intuitiva. Únete a nuestra comunidad y crea experiencias únicas.</p>
           <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
+            <a href="https://x.com/home" target="_blank"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
 
@@ -566,9 +570,9 @@
           <ul>
             <li><a href="#hero">Inicio</a></li>
             <li><a href="#about">Sobre nosotros</a></li>
-            <li><a href="blog.html">Comunidad</a></li>
-            <li><a href="service-details.html">Términos de servicio</a></li>
-            <li><a href="service-details.html">Política de privacidad</a></li>
+            <li><a data-bs-toggle="modal" data-bs-target="#myModal" href="">Comunidad</a></li>
+            <li><a data-bs-toggle="modal" data-bs-target="#myModal" href="">Términos de servicio</a></li>
+            <li><a data-bs-toggle="modal" data-bs-target="#myModal" href="">Política de privacidad</a></li>
           </ul>
         </div>
 
@@ -586,11 +590,11 @@
 
         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
           <h4>Contáctanos</h4>
-          <p>A108 Adam Street</p>
-          <p>New York, NY 535022</p>
-          <p>United States</p>
-          <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-          <p><strong>Email:</strong> <span>info@example.com</span></p>
+          <p>Cra. 40 #1 Norte-2 a 1 Norte-58</p>
+          <p>Aguachica, Cesar</p>
+          <p>Colombia</p>
+          <p class="mt-4"><strong>Telefono:</strong> <span>+57 605 588 5592</span></p>
+          <p><strong>Email:</strong> <span>pqrsaguachica@unicesar.edu.co</span></p>
         </div>
 
       </div>

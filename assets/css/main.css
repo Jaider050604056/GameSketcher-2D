@@ -2674,6 +2674,10 @@ section,
   background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
+.btn-login{
+  background-color: #680088 !important;
+  color: white;
+}
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
